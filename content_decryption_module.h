@@ -73,6 +73,8 @@ CDM_API const char* GetCdmVersion();
 
 namespace cdm {
 
+test
+
 class AudioFrames;
 class DecryptedBlock;
 class VideoFrame;
