@@ -7,6 +7,8 @@
 
 #include "content_decryption_module_export.h"
 
+TEST
+
 #if defined(_MSC_VER)
 typedef unsigned char uint8_t;
 typedef unsigned int uint32_t;
