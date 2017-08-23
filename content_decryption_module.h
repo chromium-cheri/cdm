@@ -928,8 +928,8 @@ class CDM_CLASS_API Host_8 {
   // is guaranteed to be not less than |capacity|.
   virtual Buffer* Allocate(uint32_t capacity) = 0;
 
-  // Requests the host to call ContentDecryptionModule::TimerFired() |delay_ms|
-  // from now with |context|.
+  // Requests the host to call ContentDecryptionModule::TimerExpired()
+  // |delay_ms| from now with |context|.
   virtual void SetTimer(int64_t delay_ms, void* context) = 0;
 
   // Returns the current wall time.
