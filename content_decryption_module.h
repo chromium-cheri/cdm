@@ -883,9 +883,13 @@ class CDM_CLASS_API ContentDecryptionModule_9 {
       uint32_t link_mask,
       uint32_t output_protection_mask) = 0;
 
-  // Called by the host after a call to Host::RequestStorageId(). If the storage
-  // ID is not available, null/zero will be provided.
-  virtual void OnStorageId(const uint8_t* storage_id,
+  // Called by the host after a call to Host::RequestStorageId(). If the
+  // version of the storage ID requested is available, |storage_id| and
+  // |storage_id_size| are set appropriately. If the version is not available,
+  // null/zero will be provided as |storage_id| and |storage_id_size|,
+  // respectively.
+  virtual void OnStorageId(uint32_t version,
+                           const uint8_t* storage_id,
                            uint32_t storage_id_size) = 0;
 
   // Destroys the object in the same context as it was created.
@@ -1176,11 +1180,13 @@ class CDM_CLASS_API Host_9 {
   // CDM can call this method multiple times to operate on different files.
   virtual FileIO* CreateFileIO(FileIOClient* client) = 0;
 
-  // Requests the storage ID. The ID will be returned by the host via
-  // ContentDecryptionModule::OnStorageId(). A storage ID is a stable, device
-  // specific ID used by the CDM to securely store persistent data. The CDM must
-  // not expose the ID outside the client device, even in encrypted form.
-  virtual void RequestStorageId() = 0;
+  // Requests a specific version of the storage ID. If |version| = 0, the latest
+  // version will be returned (if one exists). The ID will be returned by the
+  // host via ContentDecryptionModule::OnStorageId(). A storage ID is a stable,
+  // device specific ID used by the CDM to securely store persistent data. The
+  // CDM must not expose the ID outside the client device, even in encrypted
+  // form.
+  virtual void RequestStorageId(uint32_t version) = 0;
 
  protected:
   Host_9() {}
