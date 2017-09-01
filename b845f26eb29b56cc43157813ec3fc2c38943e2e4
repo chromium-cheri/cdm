@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2aba79c6_0053337d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2017-09-01T21:45:56Z",
+      "side": 1,
+      "message": "This interface not only used by Chrome. s/Chrome/the host/",
+      "range": {
+        "startLine": 9,
+        "startChar": 42,
+        "endLine": 9,
+        "endChar": 48
+      },
+      "revId": "b845f26eb29b56cc43157813ec3fc2c38943e2e4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "34dd81e7_af63fe22",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 890,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2017-09-01T21:45:56Z",
+      "side": 1,
+      "message": "Document what will be provided in |version|.",
+      "revId": "b845f26eb29b56cc43157813ec3fc2c38943e2e4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a2e15470_5b5e0c13",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1183,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2017-09-01T21:45:56Z",
+      "side": 1,
+      "message": "s/\u003d/is",
+      "range": {
+        "startLine": 1183,
+        "startChar": 65,
+        "endLine": 1183,
+        "endChar": 66
+      },
+      "revId": "b845f26eb29b56cc43157813ec3fc2c38943e2e4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "de408e9e_0f3d2041",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1184,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2017-09-01T21:45:56Z",
+      "side": 1,
+      "message": "what if one doesn\u0027t exist?",
+      "range": {
+        "startLine": 1184,
+        "startChar": 31,
+        "endLine": 1184,
+        "endChar": 44
+      },
+      "revId": "b845f26eb29b56cc43157813ec3fc2c38943e2e4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
