@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "42a6e861_0def76ee",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 889,
+      "author": {
+        "id": 1209939
+      },
+      "writtenOn": "2017-09-07T16:47:59Z",
+      "side": 1,
+      "message": "requested.  The actual version number is provided.",
+      "range": {
+        "startLine": 889,
+        "startChar": 47,
+        "endLine": 889,
+        "endChar": 55
+      },
+      "revId": "3f969f1361570c427fc6f40fad90be47aa8b085a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9931666b_b6108919",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 1189,
+      "author": {
+        "id": 1209939
+      },
+      "writtenOn": "2017-09-07T16:47:59Z",
+      "side": 1,
+      "message": "There is an ambiguity here. null, 0 is also returned if the requested key is not available.  Can we just make this method fail immediately if not supported?",
+      "range": {
+        "startLine": 1189,
+        "startChar": 61,
+        "endLine": 1189,
+        "endChar": 15
+      },
+      "revId": "3f969f1361570c427fc6f40fad90be47aa8b085a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
