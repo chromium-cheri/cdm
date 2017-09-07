@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "21238c78_7e862125",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 889,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2017-09-07T17:34:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "42a6e861_0def76ee",
+      "range": {
+        "startLine": 889,
+        "startChar": 47,
+        "endLine": 889,
+        "endChar": 55
+      },
+      "revId": "3f969f1361570c427fc6f40fad90be47aa8b085a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9931666b_b6108919",
         "filename": "content_decryption_module.h",
         "patchSetId": 3
@@ -45,6 +69,30 @@
       "revId": "3f969f1361570c427fc6f40fad90be47aa8b085a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "84c03966_be1c594f",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 1189,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2017-09-07T17:34:15Z",
+      "side": 1,
+      "message": "The problem is that we don\u0027t know what is actually implemented on the browser side. We could use the same #ifdef official_build \u0026\u0026 (win || mac || ...), but other implementations may do something different. In some cases it will fail immediately (e.g. request a version \u003e 1 using pepper), but for most we just make the call and return what comes back.\n\nI would assume WV will simply call this with |version| specified when reading an encrypted file (as it should save the version # somewhere), 0 when writing a file to get the latest version. If NULL returned, the operation fails.",
+      "parentUuid": "9931666b_b6108919",
+      "range": {
+        "startLine": 1189,
+        "startChar": 61,
+        "endLine": 1189,
+        "endChar": 15
+      },
+      "revId": "3f969f1361570c427fc6f40fad90be47aa8b085a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
