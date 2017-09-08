@@ -93,6 +93,30 @@
       "revId": "3f969f1361570c427fc6f40fad90be47aa8b085a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa119981_b07daa9b",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 1189,
+      "author": {
+        "id": 1002446
+      },
+      "writtenOn": "2017-09-08T23:43:41Z",
+      "side": 1,
+      "message": "I guess a failure is a failure is a failure in this context.",
+      "parentUuid": "84c03966_be1c594f",
+      "range": {
+        "startLine": 1189,
+        "startChar": 61,
+        "endLine": 1189,
+        "endChar": 15
+      },
+      "revId": "3f969f1361570c427fc6f40fad90be47aa8b085a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
