@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "66065c9e_582d4f93",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 1519,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2017-12-01T21:52:19Z",
+      "side": 1,
+      "message": "CreateFileIO takes the client as a parameter. However, the client is specified to CdmProxy::Initialize(). Any particular reason for the difference? Can the CDM reuse a CdmProxy by calling Initialize() a second time?",
+      "range": {
+        "startLine": 1519,
+        "startChar": 20,
+        "endLine": 1519,
+        "endChar": 34
+      },
+      "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c65de750_0962a87f",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2017-12-01T21:52:19Z",
+      "side": 1,
+      "message": "I don\u0027t see int32_t or int64_t used anywhere in this file.",
+      "range": {
+        "startLine": 13,
+        "startChar": 12,
+        "endLine": 13,
+        "endChar": 19
+      },
+      "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "af21a4d4_ccc08285",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2017-12-01T21:52:19Z",
+      "side": 1,
+      "message": "expected_output_data_size?",
+      "range": {
+        "startLine": 43,
+        "startChar": 6,
+        "endLine": 43,
+        "endChar": 22
+      },
+      "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3fd8027d_f1e492b9",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2017-12-01T21:52:19Z",
+      "side": 1,
+      "message": "What is the impact of getting this wrong?",
+      "range": {
+        "startLine": 49,
+        "startChar": 32,
+        "endLine": 49,
+        "endChar": 57
+      },
+      "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6aa68ef2_eaf029df",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2017-12-01T21:52:19Z",
+      "side": 1,
+      "message": "OnMediaCryptoSessionCreated() also gets |output_data|. Should this one as well? Can this simply get the protocol, and if a session was created, OnMediaCryptoSessionCreated() is also called immediately afterwards?",
+      "range": {
+        "startLine": 97,
+        "startChar": 38,
+        "endLine": 97,
+        "endChar": 55
+      },
+      "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d5033f4b_a7ca663a",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2017-12-01T21:52:19Z",
+      "side": 1,
+      "message": "s/suceess/success/",
+      "range": {
+        "startLine": 105,
+        "startChar": 8,
+        "endLine": 105,
+        "endChar": 15
+      },
+      "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9ce39d80_b2a64b7f",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2017-12-01T21:52:19Z",
+      "side": 1,
+      "message": "Other places have uint8_t* and a size. Should it be the same here?",
+      "range": {
+        "startLine": 110,
+        "startChar": 52,
+        "endLine": 110,
+        "endChar": 63
+      },
+      "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
