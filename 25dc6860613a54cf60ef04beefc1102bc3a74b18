@@ -117,6 +117,30 @@
     },
     {
       "key": {
+        "uuid": "425b2331_cf82cc88",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1247467
+      },
+      "writtenOn": "2017-12-01T22:06:13Z",
+      "side": 1,
+      "message": "Usually a crypto session is required to talk to the hardware and this is such crypto session, so it makes sense to be created on initialize. This is different from a media crypto session which is a usually only for dealing with the media data.",
+      "parentUuid": "6aa68ef2_eaf029df",
+      "range": {
+        "startLine": 97,
+        "startChar": 38,
+        "endLine": 97,
+        "endChar": 55
+      },
+      "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d5033f4b_a7ca663a",
         "filename": "content_decryption_module_proxy.h",
         "patchSetId": 3
@@ -151,6 +175,30 @@
       "writtenOn": "2017-12-01T21:52:19Z",
       "side": 1,
       "message": "Other places have uint8_t* and a size. Should it be the same here?",
+      "range": {
+        "startLine": 110,
+        "startChar": 52,
+        "endLine": 110,
+        "endChar": 63
+      },
+      "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9938c82a_58553cb7",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1247467
+      },
+      "writtenOn": "2017-12-01T22:06:13Z",
+      "side": 1,
+      "message": "uint64 should be sufficient for now. And I think its sufficient even for other platforms if windows APIs can signal this in 64bits.",
+      "parentUuid": "9ce39d80_b2a64b7f",
       "range": {
         "startLine": 110,
         "startChar": 52,
