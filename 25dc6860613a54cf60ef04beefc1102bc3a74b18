@@ -237,6 +237,30 @@
     },
     {
       "key": {
+        "uuid": "9aefdf85_392d6664",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2017-12-04T21:47:32Z",
+      "side": 1,
+      "message": "So |crypto_session_id| has a different meaning than |crypto_session_id| passed to OnMediaCryptoSessionCreated()? Which one gets passed to SetKey()?",
+      "parentUuid": "425b2331_cf82cc88",
+      "range": {
+        "startLine": 97,
+        "startChar": 38,
+        "endLine": 97,
+        "endChar": 55
+      },
+      "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "aadd4b23_530ad214",
         "filename": "content_decryption_module_proxy.h",
         "patchSetId": 3
