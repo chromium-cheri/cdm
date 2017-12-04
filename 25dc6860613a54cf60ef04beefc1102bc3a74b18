@@ -261,6 +261,30 @@
     },
     {
       "key": {
+        "uuid": "51f9a4ea_9927d015",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2017-12-04T22:37:25Z",
+      "side": 1,
+      "message": "I chat with Rintaro on this. The idea is that this is protocol dependent. When using other protocols, it is possible that SetKey() could use a |crypto_session_id| returned in Initialize().",
+      "parentUuid": "425b2331_cf82cc88",
+      "range": {
+        "startLine": 97,
+        "startChar": 38,
+        "endLine": 97,
+        "endChar": 55
+      },
+      "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aadd4b23_530ad214",
         "filename": "content_decryption_module_proxy.h",
         "patchSetId": 3
@@ -319,6 +343,30 @@
       "side": 1,
       "message": "Done",
       "parentUuid": "d5033f4b_a7ca663a",
+      "range": {
+        "startLine": 105,
+        "startChar": 8,
+        "endLine": 105,
+        "endChar": 15
+      },
+      "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9b7aada1_3bcddcb1",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2017-12-04T22:37:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7943669b_da76133b",
       "range": {
         "startLine": 105,
         "startChar": 8,
@@ -398,6 +446,54 @@
       "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d1a2f62b_1ae562e2",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2017-12-04T22:37:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9368b75e_a6bfc890",
+      "range": {
+        "startLine": 110,
+        "startChar": 64,
+        "endLine": 110,
+        "endChar": 65
+      },
+      "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "588a5d7b_4576af10",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2017-12-04T22:37:25Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "9938c82a_58553cb7",
+      "range": {
+        "startLine": 110,
+        "startChar": 52,
+        "endLine": 110,
+        "endChar": 63
+      },
+      "revId": "25dc6860613a54cf60ef04beefc1102bc3a74b18",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
