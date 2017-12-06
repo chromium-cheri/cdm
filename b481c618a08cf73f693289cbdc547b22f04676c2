@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "19cbda92_3066bd20",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 394,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2017-12-06T19:53:42Z",
+      "side": 1,
+      "message": "s/sent/send/",
+      "range": {
+        "startLine": 394,
+        "startChar": 61,
+        "endLine": 394,
+        "endChar": 65
+      },
+      "revId": "b481c618a08cf73f693289cbdc547b22f04676c2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
