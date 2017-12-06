@@ -389,7 +389,8 @@ enum SessionType {
 enum MessageType {
   kLicenseRequest = 0,
   kLicenseRenewal = 1,
-  kLicenseRelease = 2
+  kLicenseRelease = 2,
+  kIndividualizationRequest = 3
 };
 
 enum HdcpVersion {
