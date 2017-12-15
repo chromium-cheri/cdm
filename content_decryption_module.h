@@ -913,8 +913,12 @@ class CDM_CLASS_API ContentDecryptionModule_10 {
   // even in an encrypted form.
   // If |allow_persistent_state| is false, the CDM must not attempt to
   // persist state. Calls to CreateFileIO() will fail.
+  // If |use_hw_secure_codecs| is true, the CDM must ensure the decryption key
+  // and video buffers (compressed and uncompressed) are securely protected by
+  // hardware.
   virtual void Initialize(bool allow_distinctive_identifier,
-                          bool allow_persistent_state) = 0;
+                          bool allow_persistent_state,
+                          bool use_hw_secure_codecs) = 0;
 
   // Gets the key status if the CDM has a hypothetical key with the |policy|.
   // The CDM must respond by calling either Host::OnResolveKeyStatusPromise()
