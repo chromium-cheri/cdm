@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "24e433bf_aad0172d",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 921,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2017-12-15T20:00:32Z",
+      "side": 1,
+      "message": "This is the name we use on Android. It does seem slightly odd on desktop. I am open for any better suggestions.",
+      "range": {
+        "startLine": 921,
+        "startChar": 31,
+        "endLine": 921,
+        "endChar": 51
+      },
+      "revId": "681a990463282c6af285e1951134586664cf8011",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
