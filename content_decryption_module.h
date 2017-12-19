@@ -931,6 +931,9 @@ class CDM_CLASS_API ContentDecryptionModule_10 {
   // Provides a server certificate to be used to encrypt messages to the
   // license server. The CDM must respond by calling either
   // Host::OnResolvePromise() or Host::OnRejectPromise().
+  // If the CDM does not support server certificates, the promise should be
+  // rejected with kExceptionNotSupportedError. Any other error should be
+  // rejected with kExceptionInvalidStateError or kExceptionQuotaExceededError.
   virtual void SetServerCertificate(uint32_t promise_id,
                                     const uint8_t* server_certificate_data,
                                     uint32_t server_certificate_data_size) = 0;
