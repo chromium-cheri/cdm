@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "c7ebc4fc_222c66b0",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 1247467
+      },
+      "writtenOn": "2018-01-24T23:49:39Z",
+      "side": 1,
+      "message": "Since nullptr is used in the .cc file, I\u0027m assuming we\u0027re allowed to use C++11 stuff.\nShouldn\u0027t this be enum VideoCodec : uint32_t {}? Same for other enums that are in these structs, otherwise it might static assert.\n\nFor this, the spec doesn\u0027t prevent the compiler from using an 8 bit integer, without the enum-base.\nhttp://en.cppreference.com/w/cpp/language/enum",
+      "range": {
+        "startLine": 255,
+        "startChar": 17,
+        "endLine": 255,
+        "endChar": 18
+      },
+      "revId": "fcd5a189c4674761d03bf07322843be38605e9d5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4483acb7_7684ec22",
         "filename": "content_decryption_module.h",
         "patchSetId": 1
