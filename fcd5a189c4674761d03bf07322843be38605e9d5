@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4483acb7_7684ec22",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 440,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-24T22:55:10Z",
+      "side": 1,
+      "message": "explicit",
+      "revId": "fcd5a189c4674761d03bf07322843be38605e9d5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
