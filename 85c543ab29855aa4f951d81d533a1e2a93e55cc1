@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0c6b1722_93ac3137",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1209939
+      },
+      "writtenOn": "2018-01-25T23:29:21Z",
+      "side": 1,
+      "message": "Just \"Cipher\"?",
+      "range": {
+        "startLine": 111,
+        "startChar": 5,
+        "endLine": 111,
+        "endChar": 15
+      },
+      "revId": "85c543ab29855aa4f951d81d533a1e2a93e55cc1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7a32e909_77f1b9c3",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1209939
+      },
+      "writtenOn": "2018-01-25T23:29:21Z",
+      "side": 1,
+      "message": "cipher_mode or just cipher?",
+      "range": {
+        "startLine": 172,
+        "startChar": 13,
+        "endLine": 172,
+        "endChar": 17
+      },
+      "revId": "85c543ab29855aa4f951d81d533a1e2a93e55cc1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "86f00fba_64091d2f",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1209939
+      },
+      "writtenOn": "2018-01-25T23:29:21Z",
+      "side": 1,
+      "message": "I do not think the pattern info is needed here. It is redundant, as it is already part of InputBuffer.",
+      "range": {
+        "startLine": 208,
+        "startChar": 11,
+        "endLine": 208,
+        "endChar": 22
+      },
+      "revId": "85c543ab29855aa4f951d81d533a1e2a93e55cc1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
