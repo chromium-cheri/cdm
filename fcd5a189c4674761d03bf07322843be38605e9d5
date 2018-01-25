@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d9408200_a85f32eb",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-01-25T02:03:38Z",
+      "side": 1,
+      "message": "Done for all enums used in structs where we check the siZE.",
+      "parentUuid": "c7ebc4fc_222c66b0",
+      "range": {
+        "startLine": 255,
+        "startChar": 17,
+        "endLine": 255,
+        "endChar": 18
+      },
+      "revId": "fcd5a189c4674761d03bf07322843be38605e9d5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4483acb7_7684ec22",
         "filename": "content_decryption_module.h",
         "patchSetId": 1
@@ -39,6 +63,24 @@
       "revId": "fcd5a189c4674761d03bf07322843be38605e9d5",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "835c9e46_c6435c2b",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 440,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-01-25T02:03:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4483acb7_7684ec22",
+      "revId": "fcd5a189c4674761d03bf07322843be38605e9d5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
