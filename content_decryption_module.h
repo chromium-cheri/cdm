@@ -30,6 +30,13 @@ typedef __int64 int64_t;
   BUILD_ENTRYPOINT_NO_EXPANSION(name, version)
 #define BUILD_ENTRYPOINT_NO_EXPANSION(name, version) name##_##version
 
+// Macro to compare size of a type with the expected size in bytes. As some
+// types contain pointers, the size is specified for both 32 and 64 bit.
+#define ASSERT_SIZE_IN_BYTES(name, size_32, size_64)                 \
+  static_assert((sizeof(void*) == 4 && sizeof(name) == size_32) ||   \
+                    (sizeof(void*) == 8 && sizeof(name) == size_64), \
+                #name " size mismatch");
+
 extern "C" {
 CDM_API void INITIALIZE_CDM_MODULE();
 
@@ -136,57 +143,59 @@ typedef double Time;
 // |   clear1   | decrypted1|  clear2  |  decrypted2 | clear3 |   decrypted3  |
 //
 struct SubsampleEntry {
-  SubsampleEntry(uint32_t clear_bytes, uint32_t cipher_bytes)
-      : clear_bytes(clear_bytes), cipher_bytes(cipher_bytes) {}
+  SubsampleEntry();
+  SubsampleEntry(uint32_t clear_bytes, uint32_t cipher_bytes);
 
   uint32_t clear_bytes;
   uint32_t cipher_bytes;
 };
+ASSERT_SIZE_IN_BYTES(SubsampleEntry, 8, 8);
 
 // Represents an input buffer to be decrypted (and possibly decoded). It does
 // not own any pointers in this struct. If |iv_size| = 0, the data is
 // unencrypted.
 struct InputBuffer {
-  InputBuffer()
-      : data(nullptr),
-        data_size(0),
-        key_id(nullptr),
-        key_id_size(0),
-        iv(nullptr),
-        iv_size(0),
-        subsamples(nullptr),
-        num_subsamples(0),
-        timestamp(0) {}
+  InputBuffer();
+  InputBuffer(const uint8_t* data,
+              uint32_t data_size,
+              const uint8_t* key_id,
+              uint32_t key_id_size,
+              const uint8_t* iv,
+              uint32_t iv_size,
+              const struct SubsampleEntry* subsamples,
+              uint32_t num_subsamples,
+              int64_t timestamp);
 
   const uint8_t* data;  // Pointer to the beginning of the input data.
-  uint32_t data_size;  // Size (in bytes) of |data|.
+  uint32_t data_size;   // Size (in bytes) of |data|.
 
   const uint8_t* key_id;  // Key ID to identify the decryption key.
-  uint32_t key_id_size;  // Size (in bytes) of |key_id|.
+  uint32_t key_id_size;   // Size (in bytes) of |key_id|.
 
   const uint8_t* iv;  // Initialization vector.
-  uint32_t iv_size;  // Size (in bytes) of |iv|.
+  uint32_t iv_size;   // Size (in bytes) of |iv|.
 
   const struct SubsampleEntry* subsamples;
   uint32_t num_subsamples;  // Number of subsamples in |subsamples|.
 
   int64_t timestamp;  // Presentation timestamp in microseconds.
 };
+ASSERT_SIZE_IN_BYTES(InputBuffer, 40, 72);
 
 struct AudioDecoderConfig {
-  enum AudioCodec {
+  enum AudioCodec : uint32_t {
     kUnknownAudioCodec = 0,
     kCodecVorbis,
     kCodecAac
   };
 
-  AudioDecoderConfig()
-      : codec(kUnknownAudioCodec),
-        channel_count(0),
-        bits_per_channel(0),
-        samples_per_second(0),
-        extra_data(nullptr),
-        extra_data_size(0) {}
+  AudioDecoderConfig();
+  AudioDecoderConfig(AudioCodec codec,
+                     int32_t channel_count,
+                     int32_t bits_per_channel,
+                     int32_t samples_per_second,
+                     uint8_t* extra_data,
+                     uint32_t extra_data_size);
 
   AudioCodec codec;
   int32_t channel_count;
@@ -198,6 +207,7 @@ struct AudioDecoderConfig {
   uint8_t* extra_data;
   uint32_t extra_data_size;
 };
+ASSERT_SIZE_IN_BYTES(AudioDecoderConfig, 24, 32);
 
 // Supported sample formats for AudioFrames.
 enum AudioFormat {
@@ -233,22 +243,23 @@ enum VideoFormat {
 };
 
 struct Size {
-  Size() : width(0), height(0) {}
-  Size(int32_t width, int32_t height) : width(width), height(height) {}
+  Size();
+  Size(int32_t width, int32_t height);
 
   int32_t width;
   int32_t height;
 };
+ASSERT_SIZE_IN_BYTES(Size, 8, 8);
 
 struct VideoDecoderConfig {
-  enum VideoCodec {
+  enum VideoCodec : uint32_t {
     kUnknownVideoCodec = 0,
     kCodecVp8,
     kCodecH264,
     kCodecVp9
   };
 
-  enum VideoCodecProfile {
+  enum VideoCodecProfile : uint32_t {
     kUnknownVideoCodecProfile = 0,
     kProfileNotNeeded,
     kH264ProfileBaseline,
@@ -265,12 +276,13 @@ struct VideoDecoderConfig {
     kVP9Profile3
   };
 
-  VideoDecoderConfig()
-      : codec(kUnknownVideoCodec),
-        profile(kUnknownVideoCodecProfile),
-        format(kUnknownVideoFormat),
-        extra_data(nullptr),
-        extra_data_size(0) {}
+  VideoDecoderConfig();
+  VideoDecoderConfig(VideoCodec codec,
+                     VideoCodecProfile profile,
+                     VideoFormat format,
+                     Size coded_size,
+                     uint8_t* extra_data,
+                     uint32_t extra_data_size);
 
   VideoCodec codec;
   VideoCodecProfile profile;
@@ -285,6 +297,7 @@ struct VideoDecoderConfig {
   uint8_t* extra_data;
   uint32_t extra_data_size;
 };
+ASSERT_SIZE_IN_BYTES(VideoDecoderConfig, 28, 40);
 
 enum StreamType {
   kStreamTypeAudio = 0,
@@ -295,6 +308,14 @@ enum StreamType {
 // after a platform challenge was initiated via Host::SendPlatformChallenge().
 // All values will be NULL / zero in the event of a challenge failure.
 struct PlatformChallengeResponse {
+  PlatformChallengeResponse();
+  PlatformChallengeResponse(const uint8_t* signed_data,
+                            uint32_t signed_data_length,
+                            const uint8_t* signed_data_signature,
+                            uint32_t signed_data_signature_length,
+                            const uint8_t* platform_key_certificate,
+                            uint32_t platform_key_certificate_length);
+
   // |challenge| provided during Host::SendPlatformChallenge() combined with
   // nonce data and signed with the platform's private key.
   const uint8_t* signed_data;
@@ -308,17 +329,21 @@ struct PlatformChallengeResponse {
   const uint8_t* platform_key_certificate;
   uint32_t platform_key_certificate_length;
 };
+ASSERT_SIZE_IN_BYTES(PlatformChallengeResponse, 24, 48);
 
 // Used when passing arrays of binary data. Does not own the referenced data.
 struct BinaryData {
-  BinaryData() : data(nullptr), length(0) {}
+  BinaryData();
+  BinaryData(const uint8_t* data, uint32_t length);
+
   const uint8_t* data;
   uint32_t length;
 };
+ASSERT_SIZE_IN_BYTES(BinaryData, 8, 16);
 
 // The current status of the associated key. The valid types are defined in the
 // spec: https://w3c.github.io/encrypted-media/#idl-def-MediaKeyStatus
-enum KeyStatus {
+enum KeyStatus : uint32_t {
   kUsable = 0,
   kInternalError = 1,
   kExpired = 2,
@@ -332,16 +357,18 @@ enum KeyStatus {
 // data. |system_code| is an additional error code for unusable keys and
 // should be 0 when |status| == kUsable.
 struct KeyInformation {
-  KeyInformation()
-      : key_id(nullptr),
-        key_id_size(0),
-        status(kInternalError),
-        system_code(0) {}
+  KeyInformation();
+  KeyInformation(const uint8_t* key_id,
+                 uint32_t key_id_size,
+                 KeyStatus status,
+                 uint32_t system_code);
+
   const uint8_t* key_id;
   uint32_t key_id_size;
   KeyStatus status;
   uint32_t system_code;
 };
+ASSERT_SIZE_IN_BYTES(KeyInformation, 16, 24);
 
 // Supported output protection methods for use with EnableOutputProtection() and
 // returned by OnQueryOutputProtectionStatus().
@@ -396,7 +423,7 @@ enum MessageType {
   kIndividualizationRequest = 3
 };
 
-enum HdcpVersion {
+enum HdcpVersion : uint32_t {
   kHdcpVersionNone,
   kHdcpVersion1_0,
   kHdcpVersion1_1,
@@ -409,10 +436,12 @@ enum HdcpVersion {
 };
 
 struct Policy {
-  Policy() : min_hdcp_version(kHdcpVersionNone) {}
+  Policy();
+  explicit Policy(HdcpVersion min_hdcp_version);
 
   HdcpVersion min_hdcp_version;
 };
+ASSERT_SIZE_IN_BYTES(Policy, 4, 4);
 
 // FileIO interface provides a way for the CDM to store data in a file in
 // persistent storage. This interface aims only at providing basic read/write
