@@ -107,6 +107,13 @@ enum Exception {
   kExceptionQuotaExceededError
 };
 
+// The encryption cipher mode.
+enum CipherMode {
+   kUnencypted = 0,
+   kAesCtr,
+   kAesCbc
+};
+
 // Time is defined as the number of seconds since the Epoch
 // (00:00:00 UTC, January 1, 1970), not including any added leap second.
 // Also see Time definition in spec: https://w3c.github.io/encrypted-media/#time
@@ -144,20 +151,10 @@ struct SubsampleEntry {
 };
 
 // Represents an input buffer to be decrypted (and possibly decoded). It does
-// not own any pointers in this struct. If |iv_size| = 0, the data is
-// unencrypted.
+// not own any pointers in this struct. If |iv_size| = 0 or
+// |mode| = kUnencrypted, the data is unencrypted. |mode|, |encrypt_blocks|,
+// and |skip_blocks| are only valid in CDM_10 and later.
 struct InputBuffer {
-  InputBuffer()
-      : data(nullptr),
-        data_size(0),
-        key_id(nullptr),
-        key_id_size(0),
-        iv(nullptr),
-        iv_size(0),
-        subsamples(nullptr),
-        num_subsamples(0),
-        timestamp(0) {}
-
   const uint8_t* data;  // Pointer to the beginning of the input data.
   uint32_t data_size;  // Size (in bytes) of |data|.
 
@@ -171,6 +168,10 @@ struct InputBuffer {
   uint32_t num_subsamples;  // Number of subsamples in |subsamples|.
 
   int64_t timestamp;  // Presentation timestamp in microseconds.
+
+  CipherMode mode;  // Encryption scheme mode.
+  uint32_t encrypt_blocks;  // Encryption scheme pattern.
+  uint32_t skip_blocks;
 };
 
 struct AudioDecoderConfig {
@@ -186,7 +187,10 @@ struct AudioDecoderConfig {
         bits_per_channel(0),
         samples_per_second(0),
         extra_data(nullptr),
-        extra_data_size(0) {}
+        extra_data_size(0),
+        mode(CipherMode::kUnencypted),
+        encrypt_blocks(0),
+        skip_blocks(0) {}
 
   AudioCodec codec;
   int32_t channel_count;
@@ -197,6 +201,11 @@ struct AudioDecoderConfig {
   // vorbis setup header.
   uint8_t* extra_data;
   uint32_t extra_data_size;
+
+  // The following are only valid in CDM_10 and later.
+  CipherMode mode;  // Encryption scheme mode.
+  uint32_t encrypt_blocks;  // Default encryption scheme pattern.
+  uint32_t skip_blocks;
 };
 
 // Supported sample formats for AudioFrames.
@@ -270,7 +279,10 @@ struct VideoDecoderConfig {
         profile(kUnknownVideoCodecProfile),
         format(kUnknownVideoFormat),
         extra_data(nullptr),
-        extra_data_size(0) {}
+        extra_data_size(0),
+        mode(CipherMode::kUnencypted),
+        encrypt_blocks(0),
+        skip_blocks(0) {}
 
   VideoCodec codec;
   VideoCodecProfile profile;
@@ -284,6 +296,11 @@ struct VideoDecoderConfig {
   // AAVC data.
   uint8_t* extra_data;
   uint32_t extra_data_size;
+
+  // The following are only valid in CDM_10 and later.
+  CipherMode mode;  // Encryption scheme mode.
+  uint32_t encrypt_blocks;  // Default encryption scheme pattern.
+  uint32_t skip_blocks;
 };
 
 enum StreamType {
