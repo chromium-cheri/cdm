@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "251e6db6_044f7097",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-26T00:47:30Z",
+      "side": 1,
+      "message": "I just learned these this week so if it\u0027s wrong please let me know :)\n\nSince we are touching this, it might worth making this struct POD type, i.e. both trivial and standard layout, for maximum compatibility. You can still have the second constructor, but the first constructor should be \"\u003d default\" to make the struct \"trivial\".\n\nYou can actually use is_trivial, is_standard_layout and is_pod to check them (I didn\u0027t try but please do try it in case my understanding is wrong).\n\nHere are some good reads (which probably worth adding to the README file):\n\nhttps://en.wikipedia.org/wiki/C%2B%2B11#Modification_to_the_definition_of_plain_old_data\n\nhttps://stackoverflow.com/questions/6496545/trivial-vs-standard-layout-vs-pod\n\nhttps://msdn.microsoft.com/en-us/library/mt767760.aspx\n\nditto for other classes.",
+      "revId": "ebf9004c15fa6c71625a358d8d542d2f0c64d930",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
