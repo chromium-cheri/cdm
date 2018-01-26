@@ -16,6 +16,24 @@
       "revId": "ebf9004c15fa6c71625a358d8d542d2f0c64d930",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9274e4ed_685088a1",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-01-26T21:02:42Z",
+      "side": 1,
+      "message": "\"\u003d default\" works fine, but there is still a compiler error if the struct is too complex (more than 10 fields). After discussion offline, switching to getting rid of the constructors completely.",
+      "parentUuid": "251e6db6_044f7097",
+      "revId": "ebf9004c15fa6c71625a358d8d542d2f0c64d930",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
