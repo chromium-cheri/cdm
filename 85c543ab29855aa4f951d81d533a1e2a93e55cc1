@@ -25,6 +25,23 @@
     },
     {
       "key": {
+        "uuid": "77e93ad8_9a5a97b4",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-26T01:05:40Z",
+      "side": 1,
+      "message": "CTR and CBC aren\u0027t super commonly used abbreviations. But I agree having the full term seems silly. Add a comment?",
+      "revId": "85c543ab29855aa4f951d81d533a1e2a93e55cc1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7a32e909_77f1b9c3",
         "filename": "content_decryption_module.h",
         "patchSetId": 1
@@ -48,6 +65,23 @@
     },
     {
       "key": {
+        "uuid": "1f776e62_2345e597",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-26T01:05:40Z",
+      "side": 1,
+      "message": "This struct is also used by previous versions of CDM interfaces. This change will break the ABI compatibility since we are changing the definition of this struct.\n\nHistorically we\u0027ll introduce a new InputBuffer_1 to work around this issue. You can check the history of this file to find examples.\n\nDitto for modified structs below.",
+      "revId": "85c543ab29855aa4f951d81d533a1e2a93e55cc1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "86f00fba_64091d2f",
         "filename": "content_decryption_module.h",
         "patchSetId": 1
@@ -65,6 +99,47 @@
         "endLine": 208,
         "endChar": 22
       },
+      "revId": "85c543ab29855aa4f951d81d533a1e2a93e55cc1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1a643fd9_d05fd695",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-26T01:05:40Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "86f00fba_64091d2f",
+      "range": {
+        "startLine": 208,
+        "startChar": 11,
+        "endLine": 208,
+        "endChar": 22
+      },
+      "revId": "85c543ab29855aa4f951d81d533a1e2a93e55cc1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7ee79793_0c59cd97",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-26T01:05:40Z",
+      "side": 1,
+      "message": "It might be worth defining a struct Pattern {...} to be consistent with Chromium.",
       "revId": "85c543ab29855aa4f951d81d533a1e2a93e55cc1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
