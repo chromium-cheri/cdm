@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "e4ceb7cc_74414cf3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-01-29T22:56:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4ded4eb4_a6a8c85d",
+      "range": {
+        "startLine": 16,
+        "startChar": 39,
+        "endLine": 16,
+        "endChar": 52
+      },
+      "revId": "7a4b3d12129d8f8565f1f9c232498fec7112fe6d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0085cb46_b2aa1e7c",
         "filename": "content_decryption_module.h",
         "patchSetId": 5
@@ -39,6 +63,24 @@
       "revId": "7a4b3d12129d8f8565f1f9c232498fec7112fe6d",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "305c080d_cc8801ae",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-01-29T22:56:38Z",
+      "side": 1,
+      "message": "Done. is_pod\u003c\u003e is going away in c++20, so check is_standard_layout\u003c\u003e and is_trivial\u003c\u003e.",
+      "parentUuid": "0085cb46_b2aa1e7c",
+      "revId": "7a4b3d12129d8f8565f1f9c232498fec7112fe6d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
