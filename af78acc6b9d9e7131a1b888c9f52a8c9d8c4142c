@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "d736e8b3_2c2d174a",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1002,
+      "author": {
+        "id": 1247467
+      },
+      "writtenOn": "2018-01-30T23:23:21Z",
+      "side": 1,
+      "message": "Is this called after OnSessionKeysChange()?",
+      "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b0545864_fa0e239a",
         "filename": "content_decryption_module.h",
         "patchSetId": 1
@@ -36,6 +53,29 @@
     },
     {
       "key": {
+        "uuid": "e8e53d4a_c024a489",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1442,
+      "author": {
+        "id": 1247467
+      },
+      "writtenOn": "2018-01-30T23:23:21Z",
+      "side": 1,
+      "message": "What if CDMProxy is used? Should this say Decrypt() instead?",
+      "range": {
+        "startLine": 1442,
+        "startChar": 33,
+        "endLine": 1442,
+        "endChar": 43
+      },
+      "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "262e0e42_7ef7a68e",
         "filename": "content_decryption_module.h",
         "patchSetId": 1
@@ -47,6 +87,24 @@
       "writtenOn": "2018-01-30T04:12:58Z",
       "side": 1,
       "message": "Alternatively, we can completely switch to an async decoder initialization mode, i.e. let Initialize*Decoder() return void, and change this to OnDecoderInitialized(). WDYT?",
+      "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3c258110_91073d1e",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1450,
+      "author": {
+        "id": 1247467
+      },
+      "writtenOn": "2018-01-30T23:23:21Z",
+      "side": 1,
+      "message": "That sounds good to me.",
+      "parentUuid": "262e0e42_7ef7a68e",
       "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
