@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a2bd9e09_b4caaacc",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1002,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-30T04:12:58Z",
+      "side": 1,
+      "message": "jrummell: We can add cipher mode etc as well.",
+      "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b0545864_fa0e239a",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1014,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-30T04:12:58Z",
+      "side": 1,
+      "message": "We can also add a StreamType |stream_type| parameter in this call. The CDM cannot fully trust it, but can take it as a hint.",
+      "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "262e0e42_7ef7a68e",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1450,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-30T04:12:58Z",
+      "side": 1,
+      "message": "Alternatively, we can completely switch to an async decoder initialization mode, i.e. let Initialize*Decoder() return void, and change this to OnDecoderInitialized(). WDYT?",
+      "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
