@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "c4d8f78e_63bbdee3",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1209939
+      },
+      "writtenOn": "2018-01-30T21:33:03Z",
+      "side": 1,
+      "message": "s/name/type/",
+      "range": {
+        "startLine": 35,
+        "startChar": 29,
+        "endLine": 35,
+        "endChar": 33
+      },
+      "revId": "fcd5a189c4674761d03bf07322843be38605e9d5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c7ebc4fc_222c66b0",
         "filename": "content_decryption_module.h",
         "patchSetId": 1
