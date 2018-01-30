@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "9cc935e5_70ee906c",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1002,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-30T23:42:19Z",
+      "side": 1,
+      "message": "This will be called after OnInitialized() (CDM instance initailized), but can be called before we create any session. Basically, when this can be called is exactly the same as Initialize*Decoder(). If the CDM cannot answer the question right away, it can wait until it can (e.g. after fetching a license).",
+      "parentUuid": "d736e8b3_2c2d174a",
+      "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b0545864_fa0e239a",
         "filename": "content_decryption_module.h",
         "patchSetId": 1
@@ -64,6 +82,30 @@
       "writtenOn": "2018-01-30T23:23:21Z",
       "side": 1,
       "message": "What if CDMProxy is used? Should this say Decrypt() instead?",
+      "range": {
+        "startLine": 1442,
+        "startChar": 33,
+        "endLine": 1442,
+        "endChar": 43
+      },
+      "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a9eabb26_0d25ead0",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1442,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-30T23:42:19Z",
+      "side": 1,
+      "message": "Good point. Will do.",
+      "parentUuid": "e8e53d4a_c024a489",
       "range": {
         "startLine": 1442,
         "startChar": 33,
@@ -108,6 +150,24 @@
       "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "34a53f36_61343abb",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1450,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-30T23:42:19Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "3c258110_91073d1e",
+      "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
