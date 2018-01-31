@@ -71,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "f75bb4f1_054d5cba",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1014,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-31T21:58:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b0545864_fa0e239a",
+      "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e8e53d4a_c024a489",
         "filename": "content_decryption_module.h",
         "patchSetId": 1
@@ -115,6 +133,30 @@
       "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "13f51a86_21699ec0",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1442,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-31T21:58:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a9eabb26_0d25ead0",
+      "range": {
+        "startLine": 1442,
+        "startChar": 33,
+        "endLine": 1442,
+        "endChar": 43
+      },
+      "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     },
     {
       "key": {
@@ -165,6 +207,24 @@
       "side": 1,
       "message": "Ack",
       "parentUuid": "3c258110_91073d1e",
+      "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4b4dc07_646d7316",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1450,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-01-31T21:58:57Z",
+      "side": 1,
+      "message": "I\u0027ll do this in a separate CL.",
+      "parentUuid": "34a53f36_61343abb",
       "revId": "af78acc6b9d9e7131a1b888c9f52a8c9d8c4142c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": false
