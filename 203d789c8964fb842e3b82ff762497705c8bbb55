@@ -22,6 +22,86 @@
       "revId": "203d789c8964fb842e3b82ff762497705c8bbb55",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "66c60709_3636e618",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-02T22:06:17Z",
+      "side": 1,
+      "message": "Does it make sense to use encryption_scheme \u003d\u003d kUnencrypted to indicate clear buffer?",
+      "revId": "203d789c8964fb842e3b82ff762497705c8bbb55",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "469f28db_ecd433fe",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-02T22:06:17Z",
+      "side": 1,
+      "message": "must not be",
+      "range": {
+        "startLine": 204,
+        "startChar": 62,
+        "endLine": 204,
+        "endChar": 64
+      },
+      "revId": "203d789c8964fb842e3b82ff762497705c8bbb55",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5c9483f3_3fa58d7c",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-02T22:06:17Z",
+      "side": 1,
+      "message": "It might make sense to put all decryption related info together (equivalent of media::DecryptConfig), i.e. encryption_scheme, key_id, iv, subsamples, pattern. EncryptionScheme should probably be the first one because it defines how to use other fields.\n\nWith that, you can probably drop one padding ;)",
+      "revId": "203d789c8964fb842e3b82ff762497705c8bbb55",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e4ab8663_18edac9c",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-02T22:06:17Z",
+      "side": 1,
+      "message": "FYI, we used to rename AudioDecoderConfig_2 back to AudioDecoderConfig after AudioDecoderConfig_1 is removed. I was thinking about this, and maybe we should just keep incrementing the number, to avoid confusion (e.g. two structs with the same name are different in the history).",
+      "range": {
+        "startLine": 267,
+        "startChar": 8,
+        "endLine": 267,
+        "endChar": 28
+      },
+      "revId": "203d789c8964fb842e3b82ff762497705c8bbb55",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
