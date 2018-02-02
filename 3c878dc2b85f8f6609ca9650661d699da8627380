@@ -1,0 +1,158 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8683e952_d9934396",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-02T00:25:43Z",
+      "side": 1,
+      "message": "EncryptionScheme and Pattern",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 26
+      },
+      "revId": "3c878dc2b85f8f6609ca9650661d699da8627380",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "111be268_8840928a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-02T00:25:43Z",
+      "side": 1,
+      "message": "This paragraph needs to be updated.",
+      "revId": "3c878dc2b85f8f6609ca9650661d699da8627380",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6258be11_819d69d3",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-02T00:25:43Z",
+      "side": 1,
+      "message": "This comment doesn\u0027t add any value. Maybe quote the spec, ISO/IEC...",
+      "revId": "3c878dc2b85f8f6609ca9650661d699da8627380",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "82806062_cb3c5cd8",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-02T00:25:43Z",
+      "side": 1,
+      "message": "\"partial pattern encryption\" is not defined any where. Also \"FullSubsample\" is a bit confusing.\n\nI would suggest just going with kCenc and kCbcs. That will cause a naming conflict with init data type. So you need to either make EncryptionScheme a enum class, or use a prefix like kEncryptionSchemeCenc. The former looks more natural to me.",
+      "revId": "3c878dc2b85f8f6609ca9650661d699da8627380",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "351899c0_d022f1c9",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-02T00:25:43Z",
+      "side": 1,
+      "message": "\"encrypt\" is a verb... The spec uses crypt_byte_block and skip_byte_block. Would that be better?",
+      "revId": "3c878dc2b85f8f6609ca9650661d699da8627380",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f98d7af5_9f8d5c24",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-02T00:25:43Z",
+      "side": 1,
+      "message": "Personally I feel this is confusing. It seems easier to follow if we just have\n\nconst uint8_t* data;\nuint32_t data_size;\nunit32_t padding_1;\n\nconst uint8_t* data_2;\nuint32_t data_size;\nunit32_t padding_2;",
+      "range": {
+        "startLine": 203,
+        "startChar": 20,
+        "endLine": 203,
+        "endChar": 29
+      },
+      "revId": "3c878dc2b85f8f6609ca9650661d699da8627380",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c58a7aeb_96e0ffd9",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-02T00:25:43Z",
+      "side": 1,
+      "message": "ditto, \"partial pattern encryption\" is not defined. You can just use \"pattern encryption\" which is defined in section 9.6 in the spec.\n\nAlso, move the comment for pattern to be above |pattern|?",
+      "range": {
+        "startLine": 222,
+        "startChar": 15,
+        "endLine": 222,
+        "endChar": 41
+      },
+      "revId": "3c878dc2b85f8f6609ca9650661d699da8627380",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3fc7ebbb_6153d078",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-02T00:25:43Z",
+      "side": 1,
+      "message": "We call this |padding| above, and |padding1| here. Maybe we should be consistent about padding naming.",
+      "revId": "3c878dc2b85f8f6609ca9650661d699da8627380",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
