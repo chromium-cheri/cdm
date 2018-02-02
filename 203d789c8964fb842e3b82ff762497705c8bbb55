@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "187985b0_02b70054",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1247467
+      },
+      "writtenOn": "2018-02-02T21:00:03Z",
+      "side": 1,
+      "message": "This isn\u0027t correct. The spec says full sample and video NAL subsample encryption. It would be full sample for audio.\n\nProbably better to phrase it like\nAES-CTR mode encrypted, where the ranges are specified by SubsamplesEntry.\nOr just\nSubsample encryption ...",
+      "range": {
+        "startLine": 131,
+        "startChar": 13,
+        "endLine": 131,
+        "endChar": 24
+      },
+      "revId": "203d789c8964fb842e3b82ff762497705c8bbb55",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
