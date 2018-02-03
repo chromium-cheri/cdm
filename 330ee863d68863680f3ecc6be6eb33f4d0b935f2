@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "389e7f79_30ba4d3f",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-03T01:33:18Z",
+      "side": 1,
+      "message": "nit: Keep using the old name (InputBuffer) so that you don\u0027t have to update CDM8/CDM9 implementation. Moving forward, when we create a new version of a struct, we\u0027ll increment and version of the new struct, and won\u0027t touch old structs.",
+      "revId": "330ee863d68863680f3ecc6be6eb33f4d0b935f2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "470b3587_0f89c869",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-03T01:33:18Z",
+      "side": 1,
+      "message": "nit: add a comment like \"// padding\"?",
+      "revId": "330ee863d68863680f3ecc6be6eb33f4d0b935f2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
