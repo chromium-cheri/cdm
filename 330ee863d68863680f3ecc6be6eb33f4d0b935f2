@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "c770a337_6ea163db",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-02-03T02:03:20Z",
+      "side": 1,
+      "message": "Added the typedef back in so that Chromium doesn\u0027t need to change (except for additional code to convert to _1 for older CDMs). However, we won\u0027t remove the _2 in this file when we delete the old CDM interfaces.",
+      "parentUuid": "389e7f79_30ba4d3f",
+      "revId": "330ee863d68863680f3ecc6be6eb33f4d0b935f2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "470b3587_0f89c869",
         "filename": "content_decryption_module.h",
         "patchSetId": 7
@@ -33,6 +51,24 @@
       "revId": "330ee863d68863680f3ecc6be6eb33f4d0b935f2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a4769087_95ef588a",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-02-03T02:03:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "470b3587_0f89c869",
+      "revId": "330ee863d68863680f3ecc6be6eb33f4d0b935f2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
