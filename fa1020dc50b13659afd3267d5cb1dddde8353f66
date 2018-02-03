@@ -16,6 +16,24 @@
       "revId": "fa1020dc50b13659afd3267d5cb1dddde8353f66",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6ad70c76_238dadf4",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-02-03T01:17:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bcf423b2_c97db78f",
+      "revId": "fa1020dc50b13659afd3267d5cb1dddde8353f66",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
