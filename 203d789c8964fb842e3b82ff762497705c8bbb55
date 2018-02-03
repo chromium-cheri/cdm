@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "202d861f_1a9e3d97",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-02-03T00:16:03Z",
+      "side": 1,
+      "message": "This text is the header for 9.4.2 in the spec. But happy to change it. Done.",
+      "parentUuid": "187985b0_02b70054",
+      "range": {
+        "startLine": 131,
+        "startChar": 13,
+        "endLine": 131,
+        "endChar": 24
+      },
+      "revId": "203d789c8964fb842e3b82ff762497705c8bbb55",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "66c60709_3636e618",
         "filename": "content_decryption_module.h",
         "patchSetId": 5
@@ -39,6 +63,24 @@
       "revId": "203d789c8964fb842e3b82ff762497705c8bbb55",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2c731117_b87c23fa",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-02-03T00:16:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "66c60709_3636e618",
+      "revId": "203d789c8964fb842e3b82ff762497705c8bbb55",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     },
     {
       "key": {
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "ef514994_e7440a4c",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-02-03T00:16:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "469f28db_ecd433fe",
+      "range": {
+        "startLine": 204,
+        "startChar": 62,
+        "endLine": 204,
+        "endChar": 64
+      },
+      "revId": "203d789c8964fb842e3b82ff762497705c8bbb55",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5c9483f3_3fa58d7c",
         "filename": "content_decryption_module.h",
         "patchSetId": 5
@@ -79,6 +145,24 @@
       "revId": "203d789c8964fb842e3b82ff762497705c8bbb55",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "57dda97e_461b4d6b",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-02-03T00:16:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5c9483f3_3fa58d7c",
+      "revId": "203d789c8964fb842e3b82ff762497705c8bbb55",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     },
     {
       "key": {
@@ -102,6 +186,30 @@
       "revId": "203d789c8964fb842e3b82ff762497705c8bbb55",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0ca359b7_e865f7cc",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-02-03T00:16:03Z",
+      "side": 1,
+      "message": "Ack. Removed the typedefs.",
+      "parentUuid": "e4ab8663_18edac9c",
+      "range": {
+        "startLine": 267,
+        "startChar": 8,
+        "endLine": 267,
+        "endChar": 28
+      },
+      "revId": "203d789c8964fb842e3b82ff762497705c8bbb55",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
