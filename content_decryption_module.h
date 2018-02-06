@@ -987,12 +987,8 @@ class CDM_CLASS_API ContentDecryptionModule_10 {
   // even in an encrypted form.
   // If |allow_persistent_state| is false, the CDM must not attempt to
   // persist state. Calls to CreateFileIO() will fail.
-  // If |use_hw_secure_codecs| is true, the CDM must ensure the decryption key
-  // and video buffers (compressed and uncompressed) are securely protected by
-  // hardware.
   virtual void Initialize(bool allow_distinctive_identifier,
-                          bool allow_persistent_state,
-                          bool use_hw_secure_codecs) = 0;
+                          bool allow_persistent_state) = 0;
 
   // Gets the key status if the CDM has a hypothetical key with the |policy|.
   // The CDM must respond by calling either Host::OnResolveKeyStatusPromise()
@@ -1064,6 +1060,15 @@ class CDM_CLASS_API ContentDecryptionModule_10 {
   // Performs scheduled operation with |context| when the timer fires.
   virtual void TimerExpired(void* context) = 0;
 
+  // Initializes the CDM decryptor for |stream_type|. This function must be
+  // called before Decrypt() for the corresponding |stream_type| is called.
+  // The result is returned in Host::OnDecryptorInitialized(). It may be called
+  // multiple times for a |stream_type| during the lifetime of the CDM instance,
+  // e.g. to handle config changes. There will be at most one outstanding
+  // InitializeDecryptor() call for a |stream_type| at any time.
+  virtual void InitializeDecryptor(StreamType stream_type,
+                                   EncryptionScheme encryption_scheme) = 0;
+
   // Decrypts the |encrypted_buffer|.
   //
   // Returns kSuccess if decryption succeeded, in which case the callee
@@ -1074,7 +1079,8 @@ class CDM_CLASS_API ContentDecryptionModule_10 {
   // Returns kDecryptError if any other error happened.
   // If the return value is not kSuccess, |decrypted_buffer| should be ignored
   // by the caller.
-  virtual Status Decrypt(const InputBuffer& encrypted_buffer,
+  virtual Status Decrypt(StreamType stream_type,
+                         const InputBuffer& encrypted_buffer,
                          DecryptedBlock* decrypted_buffer) = 0;
 
   // Initializes the CDM audio decoder with |audio_decoder_config|. This
@@ -1501,6 +1507,18 @@ class CDM_CLASS_API Host_10 {
   // Called by the CDM with the result after the CDM instance was initialized.
   virtual void OnInitialized(bool success) = 0;
 
+  // Must be called by the CDM as the response of InitializeDecryptor() call.
+  // The |status| is kSuccess if Decrypt() of |stream_type| is supported and
+  // the corresponding decryptor has been successfully initialized. Otherwise,
+  // the |status| should be kInitializationError.
+  virtual void OnDecryptorInitialized(StreamType stream_type,
+                                      Status status) = 0;
+
+  // Must be called by the CDM if it returned kDeferredInitialization during
+  // InitializeAudioDecoder() or InitializeVideoDecoder().
+  virtual void OnDeferredInitializationDone(StreamType stream_type,
+                                            Status status) = 0;
+
   // Called by the CDM when a key status is available in response to
   // GetStatusForPolicy().
   virtual void OnResolveKeyStatusPromise(uint32_t promise_id,
@@ -1591,11 +1609,6 @@ class CDM_CLASS_API Host_10 {
   // Requests the current output protection status. Once the host has the status
   // it will call ContentDecryptionModule::OnQueryOutputProtectionStatus().
   virtual void QueryOutputProtectionStatus() = 0;
-
-  // Must be called by the CDM if it returned kDeferredInitialization during
-  // InitializeAudioDecoder() or InitializeVideoDecoder().
-  virtual void OnDeferredInitializationDone(StreamType stream_type,
-                                            Status decoder_status) = 0;
 
   // Creates a FileIO object from the host to do file IO operation. Returns NULL
   // if a FileIO object cannot be obtained. Once a valid FileIO object is
