@@ -1074,7 +1074,7 @@ class CDM_CLASS_API ContentDecryptionModule_10 {
   // Returns kDecryptError if any other error happened.
   // If the return value is not kSuccess, |decrypted_buffer| should be ignored
   // by the caller.
-  virtual Status Decrypt(const InputBuffer_2& encrypted_buffer,
+  virtual Status Decrypt(const InputBuffer& encrypted_buffer,
                          DecryptedBlock* decrypted_buffer) = 0;
 
   // Initializes the CDM audio decoder with |audio_decoder_config|. This
@@ -1088,7 +1088,7 @@ class CDM_CLASS_API ContentDecryptionModule_10 {
   // decoder at this time. Must call Host::OnDeferredInitializationDone() once
   // initialization is complete.
   virtual Status InitializeAudioDecoder(
-      const AudioDecoderConfig_2& audio_decoder_config) = 0;
+      const AudioDecoderConfig& audio_decoder_config) = 0;
 
   // Initializes the CDM video decoder with |video_decoder_config|. This
   // function must be called before DecryptAndDecodeFrame() is called.
@@ -1101,7 +1101,7 @@ class CDM_CLASS_API ContentDecryptionModule_10 {
   // decoder at this time. Must call Host::OnDeferredInitializationDone() once
   // initialization is complete.
   virtual Status InitializeVideoDecoder(
-      const VideoDecoderConfig_2& video_decoder_config) = 0;
+      const VideoDecoderConfig& video_decoder_config) = 0;
 
   // De-initializes the CDM decoder and sets it to an uninitialized state. The
   // caller can initialize the decoder again after this call to re-initialize
@@ -1129,7 +1129,7 @@ class CDM_CLASS_API ContentDecryptionModule_10 {
   // Returns kDecodeError if any decoding error happened.
   // If the return value is not kSuccess, |video_frame| should be ignored by
   // the caller.
-  virtual Status DecryptAndDecodeFrame(const InputBuffer_2& encrypted_buffer,
+  virtual Status DecryptAndDecodeFrame(const InputBuffer& encrypted_buffer,
                                        VideoFrame* video_frame) = 0;
 
   // Decrypts the |encrypted_buffer| and decodes the decrypted buffer into
@@ -1148,7 +1148,7 @@ class CDM_CLASS_API ContentDecryptionModule_10 {
   // Returns kDecodeError if any decoding error happened.
   // If the return value is not kSuccess, |audio_frames| should be ignored by
   // the caller.
-  virtual Status DecryptAndDecodeSamples(const InputBuffer_2& encrypted_buffer,
+  virtual Status DecryptAndDecodeSamples(const InputBuffer& encrypted_buffer,
                                          AudioFrames* audio_frames) = 0;
 
   // Called by the host after a platform challenge was initiated via
