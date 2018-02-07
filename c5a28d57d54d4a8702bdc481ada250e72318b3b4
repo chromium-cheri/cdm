@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "022e622f_7ee8a6cb",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-07T00:19:40Z",
+      "side": 1,
+      "message": "The enum name already contains the 4cc, \u0027cenc\u0027? Or is there a different 4cc value we need to add here?",
+      "parentUuid": "9dd0f354_e6e360b1",
+      "range": {
+        "startLine": 131,
+        "startChar": 13,
+        "endLine": 131,
+        "endChar": 22
+      },
+      "revId": "c5a28d57d54d4a8702bdc481ada250e72318b3b4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ea6b0440_6dd89db9",
         "filename": "content_decryption_module.h",
         "patchSetId": 8
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "489cb9ca_41d8a2dd",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-07T00:19:40Z",
+      "side": 1,
+      "message": "These are the exact names used in the spec and it\u0027ll be the least confusing IMHO.",
+      "parentUuid": "ea6b0440_6dd89db9",
+      "range": {
+        "startLine": 139,
+        "startChar": 0,
+        "endLine": 139,
+        "endChar": 63
+      },
+      "revId": "c5a28d57d54d4a8702bdc481ada250e72318b3b4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a2c06dc8_96a6b1f2",
         "filename": "content_decryption_module.h",
         "patchSetId": 8
@@ -59,6 +107,30 @@
       "writtenOn": "2018-02-07T00:01:53Z",
       "side": 1,
       "message": "How would this work for streams where just Decrypt() is called for both audio and video?  How do we map it to the encryption scheme?\n\nI think this just ought to go in the InputBuffer as well.",
+      "range": {
+        "startLine": 370,
+        "startChar": 0,
+        "endLine": 370,
+        "endChar": 37
+      },
+      "revId": "c5a28d57d54d4a8702bdc481ada250e72318b3b4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "88dd3e1f_5f8956bb",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 370,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-07T00:19:40Z",
+      "side": 1,
+      "message": "\u003e How would this work for streams where just Decrypt() is called for both audio and video?  How do we map it to the encryption scheme?\n\nGood point. I am adding an InitializeDecrypt() call where the EncryptionScheme will be passed in. See https://chromium-review.googlesource.com/c/chromium/cdm/+/892290/3/content_decryption_module.h#1069\n \n\u003e I think this just ought to go in the InputBuffer as well.\n\nIt is in InputBuffer_2, for convenience, see line 209",
+      "parentUuid": "a2c06dc8_96a6b1f2",
       "range": {
         "startLine": 370,
         "startChar": 0,
