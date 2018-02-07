@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2597d9b0_572bdecd",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 1426,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-07T01:22:07Z",
+      "side": 1,
+      "message": "rkuroiwa: This is new. I was debating about using Status+bool vs adding a new enum. Please let me know which option you prefer.",
+      "range": {
+        "startLine": 1426,
+        "startChar": 38,
+        "endLine": 1426,
+        "endChar": 61
+      },
+      "revId": "ce1c0a7ecd35854f6afc4ab0aa045aff93877fd7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
