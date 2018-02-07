@@ -22,6 +22,47 @@
       "revId": "cce191ce7812c09806ce7b8f4c7c61ba1aea5a03",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e7222068_68bd00a9",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 1510,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-07T00:28:49Z",
+      "side": 1,
+      "message": "This is not only added for EncryptionScheme, it\u0027s needed for the CdmProxy path.",
+      "parentUuid": "f60daed8_12987232",
+      "range": {
+        "startLine": 1510,
+        "startChar": 0,
+        "endLine": 1510,
+        "endChar": 77
+      },
+      "revId": "cce191ce7812c09806ce7b8f4c7c61ba1aea5a03",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4580501f_28684a87",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 1515,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-07T00:28:49Z",
+      "side": 1,
+      "message": "To myself: We need to add a way to indicate that the CDM can do decryption, but the decrypted result is still encrypted and need to be handled by the CdmProxy.",
+      "revId": "cce191ce7812c09806ce7b8f4c7c61ba1aea5a03",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
