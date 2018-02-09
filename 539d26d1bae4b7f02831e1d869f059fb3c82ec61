@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4bd54b92_e4895dc8",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1522,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-09T19:07:25Z",
+      "side": 1,
+      "message": "In the last CL I renamed GetCdmProxy() back to CreateCdmProxy() because the timing to call this API is critical. But I don\u0027t have strong opinion on that. Please let me know what you think about it.",
+      "range": {
+        "startLine": 1522,
+        "startChar": 20,
+        "endLine": 1522,
+        "endChar": 34
+      },
+      "revId": "539d26d1bae4b7f02831e1d869f059fb3c82ec61",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
