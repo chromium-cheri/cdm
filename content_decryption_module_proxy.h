@@ -25,10 +25,11 @@ class CDM_CLASS_API CdmProxyClient;
 // enum range may not work.
 class CDM_CLASS_API CdmProxy {
  public:
-  enum Function {
+  enum Function : uint32_t {
+    kNone = 0,  // No protocol supported. Can be used in failure cases.
     // For Intel Negotiate Crypto SessionKey Exchange (CSME) path to call
     // ID3D11VideoContext::NegotiateCryptoSessionKeyExchange.
-    kIntelNegotiateCryptoSessionKeyExchange,
+    kIntelNegotiateCryptoSessionKeyExchange = 1,
     // There will be more values in the future e.g. for D3D11 RSA method.
   };
 
@@ -65,9 +66,6 @@ class CDM_CLASS_API CdmProxy {
                          const uint8_t* key_id,
                          uint32_t key_id_size) = 0;
 
-  // Destroys the object in the same context as it was created.
-  virtual void Destroy() = 0;
-
  protected:
   CdmProxy() {}
   virtual ~CdmProxy() {}
@@ -76,12 +74,12 @@ class CDM_CLASS_API CdmProxy {
 // Responses to CdmProxy calls. All responses will be called asynchronously.
 class CDM_CLASS_API CdmProxyClient {
  public:
-  enum Status {
+  enum Status : uint32_t {
     kOk,
     kFail,
   };
 
-  enum Protocol {
+  enum Protocol : uint32_t {
     // Method using Intel CSME.
     kIntelConvergedSecurityAndManageabilityEngine,
     // There will be more values in the future e.g. kD3D11RsaHardware,
