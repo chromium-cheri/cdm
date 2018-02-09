@@ -1510,13 +1510,13 @@ class CDM_CLASS_API Host_10 {
   virtual FileIO* CreateFileIO(FileIOClient* client) = 0;
 
   // Creates a CdmProxy that proxies part of CDM functionalities to a different
-  // entity, e.g. hardware CDM modules. When not needed, the caller must call
-  // CdmProxy::Destroy() to destroy the CdmProxy in the same context as it was
-  // created. The |client| must remain valid until Destroy() is called.
-  // A CDM instance can have at most one CdmProxy throughout its lifetime, which
-  // should only be created and initialized during CDM instance initialization
-  // time, i.e. before OnInitialized() is called, to ensure proper connection of
-  // the CdmProxy and the media player (e.g. hardware decoder).
+  // entity, e.g. hardware CDM modules. A CDM instance can have at most one
+  // CdmProxy throughout its lifetime, which must be created and initialized
+  // during CDM instance initialization time, i.e. before OnInitialized() is
+  // called, to ensure proper connection of the CdmProxy and the media player
+  // (e.g. hardware decoder). The created CdmProxy is owned by the host and is
+  // guaranteed to be valid throughout the CDM instance's lifetime. The |client|
+  // must also remain valid before the CDM instance is destroyed.
   // Returns null if CdmProxy is not supported, or if CreateCdmProxy() is called
   // more than once, or called after the CDM instance has been initialized.
   virtual CdmProxy* CreateCdmProxy(CdmProxyClient* client) = 0;
