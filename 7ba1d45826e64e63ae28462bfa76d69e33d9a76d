@@ -22,6 +22,30 @@
       "revId": "7ba1d45826e64e63ae28462bfa76d69e33d9a76d",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "57a0d6fe_4d6ad792",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 1520,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-12T20:42:50Z",
+      "side": 1,
+      "message": "As discussed offline, we\u0027ll still need to return nullptr for the following two cases, and the CDM will always need to handle nullptr. Today, Chromium actually will always return a non-null CdmProxy, so this is just really for the completeness and flexibility of the API.",
+      "parentUuid": "a4b8a1c3_38ad9b34",
+      "range": {
+        "startLine": 1520,
+        "startChar": 5,
+        "endLine": 1520,
+        "endChar": 47
+      },
+      "revId": "7ba1d45826e64e63ae28462bfa76d69e33d9a76d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
