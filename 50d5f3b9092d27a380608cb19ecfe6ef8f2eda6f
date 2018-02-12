@@ -68,6 +68,30 @@
       "revId": "50d5f3b9092d27a380608cb19ecfe6ef8f2eda6f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ddff0f74_32e2bf84",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-02-12T20:44:30Z",
+      "side": 1,
+      "message": "We assume the CdmProxy will re-encrypt with CENC. Otherwise, we have to define an output EncryptiongScheme, or special codec for the \"transcrypt\" case.",
+      "parentUuid": "64b17267_ae1390fd",
+      "range": {
+        "startLine": 332,
+        "startChar": 28,
+        "endLine": 332,
+        "endChar": 53
+      },
+      "revId": "50d5f3b9092d27a380608cb19ecfe6ef8f2eda6f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
