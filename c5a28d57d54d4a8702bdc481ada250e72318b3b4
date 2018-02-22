@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "3548a307_8e794dd4",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-02-22T23:21:19Z",
+      "side": 1,
+      "message": "Updated the comment.",
+      "parentUuid": "022e622f_7ee8a6cb",
+      "range": {
+        "startLine": 131,
+        "startChar": 13,
+        "endLine": 131,
+        "endChar": 22
+      },
+      "revId": "c5a28d57d54d4a8702bdc481ada250e72318b3b4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ea6b0440_6dd89db9",
         "filename": "content_decryption_module.h",
         "patchSetId": 8
@@ -157,6 +181,24 @@
       "revId": "c5a28d57d54d4a8702bdc481ada250e72318b3b4",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8875ddee_877cb01e",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 1077,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-02-22T23:21:19Z",
+      "side": 1,
+      "message": "As the typedef is only used by Chrome, removed it. This means any time we add a new version Chrome will have to be updated, but that\u0027s probably a good idea so that each place it\u0027s used is checked to see if changes are required.",
+      "parentUuid": "1a0f0ee7_395d799a",
+      "revId": "c5a28d57d54d4a8702bdc481ada250e72318b3b4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
