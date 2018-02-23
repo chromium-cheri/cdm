@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "94a61e31_4a62aeda",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 10
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 1003189
+      },
+      "writtenOn": "2018-02-23T23:57:27Z",
+      "side": 1,
+      "message": "Chromecast uses the initial values (and doesn\u0027t get the updated values with the data). So it is possible that a CDM may care about this. WV should probably check for \"supported\" values, just in case we decide to add other values in the future.",
+      "parentUuid": "99c35c35_b7c0edf7",
+      "range": {
+        "startLine": 259,
+        "startChar": 0,
+        "endLine": 259,
+        "endChar": 37
+      },
+      "revId": "63d68f62ee7e8007f6cb6b2f8a4f202df99cf4d2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "96546295_b7e346b8",
         "filename": "content_decryption_module.h",
         "patchSetId": 10
