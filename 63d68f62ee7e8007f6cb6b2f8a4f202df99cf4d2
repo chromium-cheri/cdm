@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "99c35c35_b7c0edf7",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 10
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 1209939
+      },
+      "writtenOn": "2018-02-23T18:25:11Z",
+      "side": 1,
+      "message": "Since this value has to be in InputBuffer anyway, having it here is redundant. Will any CDM ever care about what the \"default\" encryption scheme is when it is subject to change? I seriously doubt it. Can we please nix?",
+      "range": {
+        "startLine": 259,
+        "startChar": 0,
+        "endLine": 259,
+        "endChar": 37
+      },
+      "revId": "63d68f62ee7e8007f6cb6b2f8a4f202df99cf4d2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "96546295_b7e346b8",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 10
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 1209939
+      },
+      "writtenOn": "2018-02-23T18:25:11Z",
+      "side": 1,
+      "message": "Same.",
+      "range": {
+        "startLine": 366,
+        "startChar": 0,
+        "endLine": 366,
+        "endChar": 37
+      },
+      "revId": "63d68f62ee7e8007f6cb6b2f8a4f202df99cf4d2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
