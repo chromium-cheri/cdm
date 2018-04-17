@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7d2f2a85_770ad108",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 1683,
+      "author": {
+        "id": 1247467
+      },
+      "writtenOn": "2018-04-17T23:57:13Z",
+      "side": 1,
+      "message": "in or after CDM::Initialize() and",
+      "range": {
+        "startLine": 1683,
+        "startChar": 50,
+        "endLine": 1683,
+        "endChar": 51
+      },
+      "revId": "96e156a505973cfb1e8f47c83b26c084c1d333f7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bd389e3f_5c2ee5f8",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 1689,
+      "author": {
+        "id": 1247467
+      },
+      "writtenOn": "2018-04-17T23:57:13Z",
+      "side": 1,
+      "message": "called before CDM::Initialize(),",
+      "range": {
+        "startLine": 1689,
+        "startChar": 20,
+        "endLine": 1689,
+        "endChar": 21
+      },
+      "revId": "96e156a505973cfb1e8f47c83b26c084c1d333f7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
