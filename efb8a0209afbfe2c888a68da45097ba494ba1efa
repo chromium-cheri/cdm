@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4d37886f_e0117ed9",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1289,
+      "author": {
+        "id": 1213236
+      },
+      "writtenOn": "2018-04-26T19:29:49Z",
+      "side": 1,
+      "message": "Shall we update this? And mention it in the README.md?",
+      "range": {
+        "startLine": 1288,
+        "startChar": 0,
+        "endLine": 1289,
+        "endChar": 58
+      },
+      "revId": "efb8a0209afbfe2c888a68da45097ba494ba1efa",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
