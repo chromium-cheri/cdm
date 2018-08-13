@@ -1152,8 +1152,8 @@ class CDM_CLASS_API ContentDecryptionModule_11 {
                             const char* session_id,
                             uint32_t session_id_size) = 0;
 
-  // Removes any stored session data associated with this session. Will only be
-  // called for persistent sessions. The CDM must respond by calling either
+  // Removes any stored session data associated with this session. Can be
+  // called for any session type. The CDM must respond by calling either
   // Host::OnResolvePromise() or Host::OnRejectPromise() when the request has
   // been processed.
   virtual void RemoveSession(uint32_t promise_id,
