@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a5520eb_f04271ef",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1156,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-08-13T22:26:31Z",
+      "side": 1,
+      "message": "Thanks! It\u0027s actually ambiguous on what \"stored session data\" mean, e.g. \"record of license destruction\" should not be cleared.\n\nHow about the following:\n\nRemoves all license(s) and key(s) associated with the session, whether they are in memory, persistent store or both. For persistent session types, other session data (e.g. record of license destruction) will be cleared as defined for each session type once a release message acknowledgment is processed by UpdateSession().",
+      "revId": "762e0fa4abcfb1384eaaf7c5a9a008ab06dcc187",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
