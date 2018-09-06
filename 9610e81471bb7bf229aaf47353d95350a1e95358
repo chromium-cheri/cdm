@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5127ede2_35d4c0dd",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1115926
+      },
+      "writtenOn": "2018-09-06T23:51:44Z",
+      "side": 1,
+      "message": "Optional FYI:\nuint8_t would be sufficient for all of these, meaning the entire ColorSpace could be 4 bytes",
+      "revId": "9610e81471bb7bf229aaf47353d95350a1e95358",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e93ec065_f339c805",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 570,
+      "author": {
+        "id": 1115926
+      },
+      "writtenOn": "2018-09-06T23:51:44Z",
+      "side": 1,
+      "message": "Should these functions have comments/documentation?",
+      "range": {
+        "startLine": 570,
+        "startChar": 1,
+        "endLine": 570,
+        "endChar": 7
+      },
+      "revId": "9610e81471bb7bf229aaf47353d95350a1e95358",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f5b8f1c2_ba1b1d57",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 586,
+      "author": {
+        "id": 1115926
+      },
+      "writtenOn": "2018-09-06T23:51:44Z",
+      "side": 1,
+      "message": "What\u0027s the unit of the timestamp, and what is it an offset from?",
+      "range": {
+        "startLine": 586,
+        "startChar": 28,
+        "endLine": 586,
+        "endChar": 35
+      },
+      "revId": "9610e81471bb7bf229aaf47353d95350a1e95358",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
