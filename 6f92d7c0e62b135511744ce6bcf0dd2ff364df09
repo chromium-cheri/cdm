@@ -22,6 +22,30 @@
       "revId": "6f92d7c0e62b135511744ce6bcf0dd2ff364df09",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2a31826d_730c36d1",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 541,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-09-17T19:44:53Z",
+      "side": 1,
+      "message": "It\u0027s still used in CDM_10 and before. I can add a comment about this (in a later CL).",
+      "parentUuid": "b2418619_03075193",
+      "range": {
+        "startLine": 541,
+        "startChar": 20,
+        "endLine": 541,
+        "endChar": 30
+      },
+      "revId": "6f92d7c0e62b135511744ce6bcf0dd2ff364df09",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
     }
   ]
 }
