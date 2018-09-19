@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a5c2143_d919f678",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 636,
+      "author": {
+        "id": 1213236
+      },
+      "writtenOn": "2018-09-19T23:57:48Z",
+      "side": 1,
+      "message": "Since CDM_11 is added, shall we add that?",
+      "range": {
+        "startLine": 636,
+        "startChar": 0,
+        "endLine": 636,
+        "endChar": 28
+      },
+      "revId": "57e20546bc2afeabae7716ae3fc73bf091a76343",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    }
+  ]
+}
