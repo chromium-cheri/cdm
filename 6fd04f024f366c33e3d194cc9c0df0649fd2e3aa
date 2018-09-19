@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "02a7a979_bda2adb5",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-09-19T16:36:34Z",
+      "side": 1,
+      "message": "Good point. Done.",
+      "parentUuid": "46a14be8_2824caa6",
+      "range": {
+        "startLine": 28,
+        "startChar": 49,
+        "endLine": 28,
+        "endChar": 50
+      },
+      "revId": "6fd04f024f366c33e3d194cc9c0df0649fd2e3aa",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "46a2c3a6_6188acbb",
         "filename": "README.md",
         "patchSetId": 1
@@ -45,6 +69,30 @@
       "revId": "6fd04f024f366c33e3d194cc9c0df0649fd2e3aa",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f67ae3ed_cab73b0b",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-09-19T16:36:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "46a2c3a6_6188acbb",
+      "range": {
+        "startLine": 30,
+        "startChar": 60,
+        "endLine": 30,
+        "endChar": 74
+      },
+      "revId": "6fd04f024f366c33e3d194cc9c0df0649fd2e3aa",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": false
     }
   ]
 }
