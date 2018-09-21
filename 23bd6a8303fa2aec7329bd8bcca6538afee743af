@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "d1806f7b_5a923248",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1247467
+      },
+      "writtenOn": "2018-09-21T20:42:55Z",
+      "side": 1,
+      "message": "It would make sense to have an ACK with a tracking ID as an API. Otherwise, altho mojo guarantees call order, parallelizing SetKey() would be nearly impossible.\n\nThe tracking ID could be a key ID, or it could be some other ID/number.",
+      "parentUuid": "26195109_68f19011",
+      "revId": "23bd6a8303fa2aec7329bd8bcca6538afee743af",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b3b35bde_11d90929",
         "filename": "content_decryption_module_proxy.h",
         "patchSetId": 1
