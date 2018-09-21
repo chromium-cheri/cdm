@@ -110,6 +110,18 @@ class CDM_CLASS_API CdmProxyClient {
                                            uint32_t crypto_session_id,
                                            uint64_t output_data) = 0;
 
+  // Callback for SetKey(). |key_id| specifies for which key ID SetKey() was
+  // called for.
+  virtual void OnKeySet(Status status,
+                        const uint8_t* key_id,
+                        uint32_t key_id_size) = 0;
+
+  // Callback for RemoveKey(). |key_id| specifies for which key ID RemoveKey()
+  // was called for.
+  virtual void OnKeyRemoved(Status status,
+                            const uint8_t* key_id,
+                            uint32_t key_id_size) = 0;
+
   // Called when there is a hardware reset and all the hardware context is lost.
   virtual void NotifyHardwareReset() = 0;
 
