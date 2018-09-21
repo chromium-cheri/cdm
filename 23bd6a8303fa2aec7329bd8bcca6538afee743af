@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "26195109_68f19011",
+        "filename": "content_decryption_module_proxy.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2018-09-21T20:08:07Z",
+      "side": 1,
+      "message": "Thinking more on this. Typically we don\u0027t return the input parameter back for tracking purposes. If we really need tracking, we should just use some ID at the CDM interface level, similar to promise_id. So I\u0027ll remove |key_id| here and below if you agree.",
+      "parentUuid": "bb7be00c_1cb68f47",
+      "revId": "23bd6a8303fa2aec7329bd8bcca6538afee743af",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b3b35bde_11d90929",
         "filename": "content_decryption_module_proxy.h",
         "patchSetId": 1
