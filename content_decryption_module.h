@@ -429,6 +429,7 @@ CHECK_TYPE(KeyInformation, 16, 24);
 
 // Supported output protection methods for use with EnableOutputProtection() and
 // returned by OnQueryOutputProtectionStatus().
+// Deprecated: Only used in ContentDecryptionModule_10 and before.
 enum OutputProtectionMethods : uint32_t {
   kProtectionNone = 0,
   kProtectionHDCP = 1 << 0
@@ -436,6 +437,7 @@ enum OutputProtectionMethods : uint32_t {
 CHECK_TYPE(OutputProtectionMethods, 4, 4);
 
 // Connected output link types returned by OnQueryOutputProtectionStatus().
+// Deprecated: Only used in ContentDecryptionModule_10 and before.
 enum OutputLinkTypes : uint32_t {
   kLinkTypeNone = 0,
   kLinkTypeUnknown = 1 << 0,
@@ -449,6 +451,7 @@ enum OutputLinkTypes : uint32_t {
 CHECK_TYPE(OutputLinkTypes, 4, 4);
 
 // Result of the QueryOutputProtectionStatus() call.
+// Deprecated: Only used in ContentDecryptionModule_10 and before.
 enum QueryResult : uint32_t { kQuerySucceeded = 0, kQueryFailed };
 CHECK_TYPE(QueryResult, 4, 4);
 
@@ -498,6 +501,25 @@ struct Policy {
 };
 CHECK_TYPE(Policy, 4, 4);
 
+enum OutputLinkType : uint32_t {
+  kLinkTypeNone = 0,
+  kLinkTypeUnknown,
+  kLinkTypeInternal,
+  kLinkTypeVGA,
+  kLinkTypeHDMI,
+  kLinkTypeDVI,
+  kLinkTypeDisplayPort,
+  kLinkTypeNetwork
+};
+CHECK_TYPE(OutputLinkType, 4, 4);
+
+// An output link in the system with its type and enforced HDCP version.
+struct OutputLink {
+  OutputLinkType link_type;
+  HdcpVersion hdcp_version;
+};
+CHECK_TYPE(OutputLink, 8, 8);
+
 // Represents a buffer created by Allocator implementations.
 class CDM_CLASS_API Buffer {
  public:
@@ -542,6 +564,7 @@ enum VideoPlane : uint32_t {
 };
 CHECK_TYPE(VideoPlane, 4, 4);
 
+// Deprecated: Only used in ContentDecryptionModule_10 and before.
 class CDM_CLASS_API VideoFrame {
  public:
   virtual void SetFormat(VideoFormat format) = 0;
@@ -1322,15 +1345,13 @@ class CDM_CLASS_API ContentDecryptionModule_11 {
   virtual void OnPlatformChallengeResponse(
       const PlatformChallengeResponse& response) = 0;
 
-  // Called by the host after a call to Host::QueryOutputProtectionStatus(). The
-  // |link_mask| is a bit mask of OutputLinkTypes and |output_protection_mask|
-  // is a bit mask of OutputProtectionMethods. If |result| is kQueryFailed,
-  // then |link_mask| and |output_protection_mask| are undefined and should
-  // be ignored.
-  virtual void OnQueryOutputProtectionStatus(
-      QueryResult result,
-      uint32_t link_mask,
-      uint32_t output_protection_mask) = 0;
+  // Called by the host after a call to Host::QueryOutputProtectionStatus(). If
+  // |success| is false, then |output_links| and |num_output_links| are
+  // undefined and should be ignored. Otherwise, there are |num_output_links|
+  // output links in |output_links|.
+  virtual void OnQueryOutputProtectionStatus(bool success,
+                                             const OutputLink* output_links,
+                                             uint32_t num_output_links) = 0;
 
   // Called by the host after a call to Host::RequestStorageId(). If the
   // version of the storage ID requested is available, |storage_id| and
@@ -1722,11 +1743,11 @@ class CDM_CLASS_API Host_11 {
                                      const char* challenge,
                                      uint32_t challenge_size) = 0;
 
-  // Attempts to enable output protection (e.g. HDCP) on the display link. The
-  // |desired_protection_mask| is a bit mask of OutputProtectionMethods. No
-  // status callback is issued, the CDM must call QueryOutputProtectionStatus()
-  // periodically to ensure the desired protections are applied.
-  virtual void EnableOutputProtection(uint32_t desired_protection_mask) = 0;
+  // Attempts to enable the highest level protection on all current and future
+  // output links. No status callback is issued. The CDM must call
+  // QueryOutputProtectionStatus() periodically to get the actual protection
+  // status on all current output links.
+  virtual void EnableOutputProtection() = 0;
 
   // Requests the current output protection status. Once the host has the status
   // it will call ContentDecryptionModule::OnQueryOutputProtectionStatus().
