@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b401760_ca574cc2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1487803
+      },
+      "writtenOn": "2021-03-06T17:26:09Z",
+      "side": 1,
+      "message": "\u003e Patch Set 1:\n\u003e \n\u003e \u003e Patch Set 1:\n\u003e \u003e \n\u003e \u003e There is still code in cdm_adapter and cdm_host_proxy that refers to CdmProxy. I suspect it will have to be removed at the same time.\n\u003e \n\u003e That\u0027s in a different repo. I have a separate CL to do that in Chromium while I roll CDM interface deps.\n\n",
+      "revId": "fc5afac6847dc61addc1177103aa602e71a9ecac",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
