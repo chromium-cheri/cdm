@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "285b91d1_a4ed242c",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 482,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2022-05-06T22:45:55Z",
+      "side": 1,
+      "message": "This will look odd in the future (why it\u0027s not an enum)? Could you please add a comment? e.g. it\u0027ll be used to calculate offsets and this is not allowed in c++20 etc.",
+      "revId": "a44cb86b6a1cc34210a5b8912e2ae474f8bb0399",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
