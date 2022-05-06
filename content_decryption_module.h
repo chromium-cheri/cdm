@@ -479,12 +479,11 @@ class CDM_CLASS_API DecryptedBlock {
   virtual ~DecryptedBlock() {}
 };
 
-enum VideoPlane : uint32_t {
-  kYPlane = 0,
-  kUPlane = 1,
-  kVPlane = 2,
-  kMaxPlanes = 3,
-};
+using VideoPlane = uint32_t;
+constexpr VideoPlane kYPlane = 0;
+constexpr VideoPlane kUPlane = 1;
+constexpr VideoPlane kVPlane = 2;
+constexpr VideoPlane kMaxPlanes = 3;
 CHECK_TYPE(VideoPlane, 4, 4);
 
 class CDM_CLASS_API VideoFrame {
