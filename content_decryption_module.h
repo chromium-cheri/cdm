@@ -359,8 +359,9 @@ enum KeyStatus : uint32_t {
   kExpired = 2,
   kOutputRestricted = 3,
   kOutputDownscaled = 4,
-  kStatusPending = 5,
-  kReleased = 6
+  kUsableInFuture = 5,
+  kStatusPending = 6,
+  kReleased = 7
 };
 CHECK_TYPE(KeyStatus, 4, 4);
 
