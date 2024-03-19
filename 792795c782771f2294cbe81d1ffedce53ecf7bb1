@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3b808ff_9e1475b9",
+        "filename": "content_decryption_module.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 365,
+      "author": {
+        "id": 1002182
+      },
+      "writtenOn": "2024-03-19T05:50:18Z",
+      "side": 1,
+      "message": "Since this CDM and browser can be released independently, ihis change will break the Application Binary Interface (ABI). For example, an older CDM will send kStatusPending (5), but a newer browser will think that 5 means kUsableInFuture.\n\nThe safest way is to change the CDM interface/host version, so that we\u0027ll have a KeyStatus_2 which is used on Host_11 interface.\n\nSometimes we can get away with that by extending the existing enum without changing any existing values, but it can cause unexpected errors:\nhttps://source.chromium.org/chromium/chromium/src/+/main:media/cdm/cdm_type_conversion.cc;drc\u003d70cf6fbc2b4cc83b1571ef4e7f55a725924054c7;l\u003d162\nSo we\u0027ll have to evaluate the situation case by case.",
+      "revId": "792795c782771f2294cbe81d1ffedce53ecf7bb1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
