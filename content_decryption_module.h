@@ -36,6 +36,15 @@ typedef __int64 int64_t;
 // 2. is trivial.
 // 3. sizeof(type) matches the expected size in bytes. As some types contain
 //    pointers, the size is specified for both 32 and 64 bit.
+#if defined(__CHERI_PURE_CAPABILITY__)
+#define CHECK_TYPE(type, size_32, size_64)                           \
+  static_assert(std::is_standard_layout<type>(),                     \
+                #type " not standard_layout");                       \
+  static_assert(std::is_trivial<type>(), #type " not trivial");      \
+  static_assert((sizeof(void*) == 8 && sizeof(type) == size_32) ||   \
+                    (sizeof(void*) == 16 && sizeof(type) == size_64),    \
+                #type " size mismatch")
+#else // defined(__CHERI_PURE_CAPABILITY__)
 #define CHECK_TYPE(type, size_32, size_64)                           \
   static_assert(std::is_standard_layout<type>(),                     \
                 #type " not standard_layout");                       \
@@ -43,7 +52,8 @@ typedef __int64 int64_t;
   static_assert((sizeof(void*) == 4 && sizeof(type) == size_32) ||   \
                     (sizeof(void*) == 8 && sizeof(type) == size_64), \
                 #type " size mismatch")
-
+#endif // defined(__CHERI_PURE_CAPABILITY__)
+    
 extern "C" {
 
 CDM_API void INITIALIZE_CDM_MODULE();
@@ -195,7 +205,11 @@ struct InputBuffer_2 {
 
   int64_t timestamp;  // Presentation timestamp in microseconds.
 };
+#if defined(__CHERI_PURE_CAPABILITY__)
+CHECK_TYPE(InputBuffer_2, 80, 144);
+#else // defined(__CHERI_PURE_CAPABILITY__)
 CHECK_TYPE(InputBuffer_2, 64, 80);
+#endif // defined(__CHERI_PURE_CAPABILITY__)
 
 enum AudioCodec : uint32_t { kUnknownAudioCodec = 0, kCodecVorbis, kCodecAac };
 CHECK_TYPE(AudioCodec, 4, 4);
@@ -214,7 +228,11 @@ struct AudioDecoderConfig_2 {
   // Encryption scheme.
   EncryptionScheme encryption_scheme;
 };
+#if defined(__CHERI_PURE_CAPABILITY__)
+CHECK_TYPE(AudioDecoderConfig_2, 32, 48);
+#else // defined(__CHERI_PURE_CAPABILITY__)
 CHECK_TYPE(AudioDecoderConfig_2, 28, 32);
+#endif // defined(__CHERI_PURE_CAPABILITY__)
 
 // Supported sample formats for AudioFrames.
 enum AudioFormat : uint32_t {
@@ -308,7 +326,11 @@ struct VideoDecoderConfig_2 {
   // Encryption scheme.
   EncryptionScheme encryption_scheme;
 };
+#if defined(__CHERI_PURE_CAPABILITY__)
+CHECK_TYPE(VideoDecoderConfig_2, 40, 64);
+#else // defined(__CHERI_PURE_CAPABILITY__)
 CHECK_TYPE(VideoDecoderConfig_2, 36, 40);
+#endif // defined(__CHERI_PURE_CAPABILITY__)
 
 struct VideoDecoderConfig_3 {
   VideoCodec codec;
@@ -327,7 +349,11 @@ struct VideoDecoderConfig_3 {
 
   EncryptionScheme encryption_scheme;
 };
+#if defined(__CHERI_PURE_CAPABILITY__)
+CHECK_TYPE(VideoDecoderConfig_3, 40, 64);
+#else // defined(__CHERI_PURE_CAPABILITY__)
 CHECK_TYPE(VideoDecoderConfig_3, 36, 40);
+#endif // defined(__CHERI_PURE_CAPABILITY__)
 
 enum StreamType : uint32_t { kStreamTypeAudio = 0, kStreamTypeVideo = 1 };
 CHECK_TYPE(StreamType, 4, 4);
@@ -349,7 +375,11 @@ struct PlatformChallengeResponse {
   const uint8_t* platform_key_certificate;
   uint32_t platform_key_certificate_length;
 };
+#if defined(__CHERI_PURE_CAPABILITY__)
+CHECK_TYPE(PlatformChallengeResponse, 48, 96);
+#else // defined(__CHERI_PURE_CAPABILITY__)
 CHECK_TYPE(PlatformChallengeResponse, 24, 48);
+#endif // defined(__CHERI_PURE_CAPABILITY__)
 
 // The current status of the associated key. The valid types are defined in the
 // spec: https://w3c.github.io/encrypted-media/#dom-mediakeystatus
@@ -373,7 +403,11 @@ struct KeyInformation {
   KeyStatus status;
   uint32_t system_code;
 };
+#if defined(__CHERI_PURE_CAPABILITY__)
+CHECK_TYPE(KeyInformation, 24, 32);
+#else // defined(__CHERI_PURE_CAPABILITY__)
 CHECK_TYPE(KeyInformation, 16, 24);
+#endif // defined(__CHERI_PURE_CAPABILITY__)
 
 // Supported output protection methods for use with EnableOutputProtection() and
 // returned by OnQueryOutputProtectionStatus().
